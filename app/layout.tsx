@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const styles = {
-    body: 'px-16 py-8',
+    body: 'w-screen h-screen overflow-hidden px-24 py-16',
   };
 
   return (
