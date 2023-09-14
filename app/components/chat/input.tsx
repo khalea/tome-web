@@ -8,6 +8,7 @@ export default function Input() {
       'absolute bottom-12 flex flex-row self-center justify-between bg-slate-200 rounded-md p-4 w-3/4 max-h-[128px] z-100',
     input:
       'bg-transparent basis-[97%] min-h-8 content-start max-h-[100px] overflow-auto',
+
     icon: 'fill-current text-slate-500 h-6 z-40 self-end',
   };
 
