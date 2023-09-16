@@ -13,20 +13,25 @@ export default function Container({
   const [messages, setMessages] = useState<MessageProps[]>([
     {
       date: new Date(),
-      sender: 'me',
+      sender: 'Me',
       text: 'Hello',
     },
     {
       date: new Date(),
-      sender: 'you',
+      sender: 'Bot',
       text: 'Hi',
     },
     {
       date: new Date(),
-      sender: 'me',
+      sender: 'Me',
       text: 'How are you?',
     },
   ]);
+
+  // Saves the input value when the user presses send button
+  const updateMessages = (value: string) => {
+    setMessages([...messages, { date: new Date(), sender: 'Me', text: value }]);
+  };
 
   const styles = {
     container: 'flex flex-col h-screen py-2',
@@ -35,7 +40,7 @@ export default function Container({
   return (
     <section className={styles.container}>
       <Log messages={messages} />
-      <Input />
+      <Input updateMessages={updateMessages} />
     </section>
   );
 }
